@@ -1,10 +1,13 @@
 <template>
   <nav class="nav" :class="{'nav--active': isActive}">
     <ul class="nav__list">
-      <li :class="{'nav__item' : true, 'nav__item--has-child' : item.children }" v-for="item in navLinks">
+      <li
+        v-for="item in navLinks"
+        :key="item.title"
+        :class="{'nav__item' : true, 'nav__item--has-child' : item.children }">
         <nuxt-link class="nav__link" :to="item.link">{{ item.title }}</nuxt-link>
-        <ul class="nav__child-list" v-if="item.children">
-          <li class="nav__child-item" v-for="childItem in item.children">
+        <ul v-if="item.children" class="nav__child-list">
+          <li v-for="childItem in item.children" :key="childItem" class="nav__child-item">
             <a class="nav__link nav__child-link" :href="childItem.link">{{ childItem.title }}</a>
           </li>
         </ul>
@@ -20,30 +23,38 @@ export default {
     isActive: false,
     navLinks: [
       {
-        title: 'Main',
+        title: 'ABOUT',
         link: '/',
       },
       {
-        title: 'Services',
+        title: 'SERVICES',
         link: '/',
         children: [
           {
-            title: 'Data centers',
-            link: '/data-center'
+            title: 'HOTELS',
+            link: '/'
           },
           {
-            title: 'Smart yachts',
-            link: '/smart-yachts'
+            title: 'CONCERTS',
+            link: '/'
           },
           {
-            title: 'Cyber security ',
-            link: '/cyber-security'
+            title: 'YACHTS',
+            link: '/'
+          },
+          {
+            title: 'AIRPLANES',
+            link: '/'
+          },
+          {
+            title: 'CARS',
+            link: '/'
           },
         ]
       },
       {
-        title: 'Contacts',
-        link: '/contacts'
+        title: 'CONTACTS',
+        link: '/'
       }
     ]
   }),
@@ -56,8 +67,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use "../assets/styles/helpers/helpers";
-@use "../assets/styles/helpers/media";
+@use "@/assets/styles/helpers/helpers";
+@use "@/assets/styles/helpers/media";
 
 
 .nav {
@@ -66,24 +77,29 @@ export default {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: var(--c-grey00);
+  background: var(--c-grey100);
   transform: translateX(-100%);
   transition: 0.3s all;
 
   @include media.md-to-lg {
-    height: 65px;
-    transform: translateX(80%);
+    height: 64px;
+    transform: translateX(40%);
     top: 1%;
     width: 400px;
     left: 30%;
+    background: transparent;
   }
 
   @include media.lg-up {
     left: 45%;
-    transform: translateX(80%);
+    transform: translateX(40%);
     top: 1%;
     width: 400px;
-    height: 65px;
+    height: 64px;
+  }
+
+  @include media.xl-only {
+    transform: translateX(60%);
   }
 
   &--active {
@@ -118,7 +134,7 @@ export default {
   @extend %hover-animation;
   font-size: 30px;
   text-align: start;
-
+  letter-spacing: .3rem;
   @include media.md-up {
     font-size: 18px;
   }
@@ -130,7 +146,7 @@ export default {
   list-style: none;
   flex-direction: column;
   gap: 15px;
-  background: var(--c-grey00);
+  background: rgba(31, 37, 48, .3);
   padding: 20px 0px;
   text-align: start;
   min-width: 220px;
@@ -142,19 +158,24 @@ export default {
   }
 
   .nav__item--has-child:hover & {
-    @extend %box-shadow;
     display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
 
     @include media.md-up {
       position: absolute;
-      border-radius: var(--b-radius);
       bottom: 0;
-      transform: translate(-30%, 100%);
+      transform: translate(-26%, 100%);
+      margin: 0;
+      padding:20px 0;
     }
   }
 }
 
 .nav__child-link {
+  padding: 20px 0 10px;
   font-size: 20px;
   color: var(--c-grey100);
 

@@ -1,13 +1,13 @@
 <template>
   <header class="header">
     <div class="container header__container">
-      <div class="header__logo logo"><h1><NuxtLink to="/">Advanced Mail System FZE</NuxtLink></h1></div>
+      <div class="header__logo logo"><h1><NuxtLink to="/">INTELLIGENZA</NuxtLink></h1></div>
       <div class="header__nav">
         <TheNav/>
         <div
             class="hamburger"
-            @click="menuToggle"
             :class="{'hamburger--active': barsIsActive}"
+            @click="menuToggle"
         >
           <span class="hamburger__bar"></span>
           <span class="hamburger__bar"></span>
@@ -25,7 +25,7 @@ export default {
     barsIsActive: false,
   }),
   methods: {
-    menuToggle: function () {
+    menuToggle() {
       this.barsIsActive = !this.barsIsActive
       this.$nuxt.$emit('toggle-menu')
       document.querySelector('.body').classList.toggle('body--fixed')
@@ -34,15 +34,24 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@use '../assets/styles/helpers/media';
-@use '../assets/styles/helpers/helpers';
+@use '@/assets/styles/helpers/grid';
+@use '@/assets/styles/helpers/media';
+@use '@/assets/styles/helpers/helpers';
 
 .header {
   position: sticky;
   top: 0;
   z-index: var(--z-top-30);
-  background: var(--c-grey00);
-  box-shadow: 0 0 20px 1px rgb(14 25 30 / 40%);
+  background: var(--c-grey100);
+  box-shadow: 1px 3px 40px rgba(84, 179, 214, 1);
+
+  &::before {
+    content:'';
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .header__container {
@@ -96,16 +105,23 @@ export default {
   h1{
     margin: 0;
     padding: 5px 0 5px 0;
+    letter-spacing: .3rem;
   }
 
   a {
+    @extend %hover-animation;
     font-size: 20px;
     line-height: 200%;
-    color: var(--c-primary);
+    color: var(--c-grey00);
     font-weight: 600;
     text-decoration: none;
     margin: 0;
     padding: 0;
+    transition: all  ease-in-out .5s;
+    &:hover {
+      color: var(--c-grey30);
+    }
+
     @include media.md-up {
       font-size: 32px;
     }

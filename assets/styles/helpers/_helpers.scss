@@ -38,18 +38,19 @@
 %hover-animation {
   background-image: linear-gradient(
                   to right,
-                  #54b3d6,
-                  #54b3d6 50%,
-                  #000 50%
+                  #22C9D3,
+                  #22C9D3 50%,
+                  #fff 50%
   );
   background-size: 200% 100%;
-  background-position: 100%;
+  background-position: 100.5%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 
   &:hover {
     background-position: 0;
+    text-shadow: 1px 1px 30px rgba(84, 179, 214, .7);
   }
 
   &:hover::before {
@@ -65,7 +66,7 @@
                   to right,
                   var(--c-grey00),
                   var(--c-grey00) 50%,
-                  var(--c-secondary-dark) 50%
+                  var(--c-primary) 50%
   );
   background-size: 200% 100%;
   background-position: -100%;

@@ -6,7 +6,20 @@
 
 export default {
   name: 'AppBtn',
-  props: ['path', 'link', 'text']
+  props: {
+    path: {
+      type: String,
+      default: ''
+    },
+    link: {
+      type: String,
+      default: ''
+    },
+    text: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -15,16 +28,16 @@ export default {
 
 .btn {
   display: inline-block;
+  margin-top: 100px;
+  margin-bottom: 150px;
   padding: 20px 20px;
   cursor: pointer;
-  border: 0;
-  border-radius: var(--b-radius);
   color: #fff;
   text-transform: uppercase;
   text-align: center;
   font-size: 1rem;
   letter-spacing: .15rem;
-  transition: all .3s;
+  transition: all ease-in-out .6s;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -38,8 +51,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--c-secondary);
-    border-radius: var(--b-radius);
+    background-color: var(--c-primary-dark);
     z-index: -2;
   }
 
@@ -50,9 +62,8 @@ export default {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: var(--c-secondary-dark);
+    background-color: var(--c-primary);
     transition: all .3s;
-    border-radius: var(--b-radius);
     z-index: -1;
   }
 

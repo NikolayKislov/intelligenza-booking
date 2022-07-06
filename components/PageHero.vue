@@ -11,16 +11,30 @@
 
 export default {
   name: 'PageHero',
-  props: ['title','subtitle', 'image']
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    subtitle: {
+      type: String,
+      default: ''
+    },
+    image: {
+      type: String,
+      default: ''
+    }
+}
 }
 </script>
 <style lang="scss">
 @use '@/assets/styles/helpers/media';
+@use '@/assets/styles/helpers/grid';
 
 .hero {
-  height: 600px;
   background-size: cover;
   background-position: center 100%;
+  position: relative;
 }
 
 .hero__container {
@@ -40,12 +54,29 @@ export default {
 }
 
 .hero__title {
-  font-size: 42px;
-  line-height: 110%;
+  font-size: 22px;
+
+  @include media.sm-to-md {
+    font-size: 32px;
+    letter-spacing: .5rem;
+    max-width: 300px;
+  }
+
+  @include media.md-up {
+
+    font-size: 42px;
+    line-height: 110%;
+    letter-spacing: 1rem;
+  }
 }
 
 .hero__subtitle {
   font-size: 24px;
-  color: var(--c-grey00)
+  color: var(--c-grey00);
+
+  @include media.md-down {
+    font-size: 14px;
+    max-width: 300px;
+  }
 }
 </style>
