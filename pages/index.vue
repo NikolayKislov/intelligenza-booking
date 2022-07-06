@@ -62,7 +62,7 @@ export default {
         'Including ticket sellers can be official distributors of the event.',
         'This means that the buyer receives direct contact with the person responsible for the successful organisation and provision of services for the event.'
       ],
-      imageItemsYachts: ['yacht-3.jpg', 'yacht-2.jpg', 'yacht-1.jpg', 'yacht-.jpg'],
+      imageItemsYachts: ['yacht-3.jpg', 'yacht-2.jpg', 'yacht-1.jpg', 'yacht-4.jpg'],
       descriptionItemsYachts: ['Get a free list of available charter boats for you. Yachts, sailboats, inflatable boats, motor boats, catamarans - everything is at your service!',
         'Charter for whoever you want, when you want. We will cover the costs associated with its maintenance and use.',
         'You will also receive comprehensive insurance for up to 8 million euros.'
