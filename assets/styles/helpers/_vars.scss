@@ -1,0 +1,41 @@
+$main-font-size: 16px;
+$cairo: 'Cairo', sans-serif;
+
+$primary-dark: #023047;
+$primary: #219EBC;
+$primary-light: #8ECAE6;
+$secondary-dark: #FB8500;
+$secondary: #FFB703;
+$grey00: #fff;
+$grey10: #f7f7f7;
+$grey20: #ebebeb;
+$grey30: #d6d6d6;
+$grey40: #c2c2c2;
+$grey50: #adadad;
+$grey60: #858585;
+$grey70: #707070;
+$grey80: #5c5c5c;
+$grey90: #474747;
+$grey100: #1f2530;
+$black: #000;
+
+$border-radius: 4px;
+$border-radius-md: 20px;
+$border-radius-lg: 40px;
+$border-radius-round: 100px;
+
+//z-indexes
+$z-bottom: 10;
+$z-middle-bottom: 100;
+$z-middle: 150;
+$z-middle-top: 200;
+$z-top-10: 300;
+$z-top-20: 400;
+$z-top-30: 500;
+
+// breakpoints
+$xs-break: 375px;
+$sm-break: 576px;
+$md-break: 768px;
+$lg-break: 992px;
+$xl-break: 1200px;
