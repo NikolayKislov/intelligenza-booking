@@ -1,5 +1,5 @@
 <template>
-  <section class="content-section">
+  <section :id="id" class="content-section">
     <div class="content-bg" :style="{'background-image': `url(${require(`~/assets/images/${path}/${file}`)})`}"></div>
     <div class="description">
       <h2 class="description__title">{{ title }}</h2>
@@ -17,6 +17,10 @@
 export default {
   name: 'ContentSection',
   props: {
+    id: {
+      type: String,
+      default: ''
+    },
     path: {
       type: String,
       default: ''
@@ -50,9 +54,11 @@ export default {
 
 .content-section {
   position: relative;
+  margin-top: 40px;
 
   @include media.xl-only {
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    margin-top: 0;
   }
 }
 
@@ -146,8 +152,8 @@ p {
     place-items: center;
     background-color: transparent;
 
-    @media screen and ( min-width:1667px ) {
-      top:-15%;
+    @media screen and (min-width: 1667px) {
+      top: -15%;
     }
 
     .content-section:hover > & {

@@ -6,9 +6,10 @@
       subtitle="As far as you need good partner at your dream trip, we’re on your service"
       image="hero-bg.jpg"
     />
-    <SectionAbout/>
+    <SectionAbout id="about"/>
     <AdvantagesSection/>
     <ContentSection
+      id="hotels"
       path="hotels"
       file="hotels-bg.jpg"
       title="HOTELS BOOKING"
@@ -16,6 +17,7 @@
       :image-items="imageItemsHotels"
     />
     <ContentSection
+      id="concerts"
       path="concerts"
       file="concerts-bg.jpg"
       title="TICKETS BOOKING"
@@ -23,6 +25,7 @@
       :image-items="imageItemsConcerts"
     />
     <ContentSection
+      id="yachts"
       path="yachts-booking"
       file="yachts-bg.jpg"
       title="YACHTS RENT"
@@ -30,6 +33,7 @@
       :image-items="imageItemsYachts"
     />
     <ContentSection
+      id="planes"
       path="plane-booking"
       file="plane-bg.jpg"
       title="PLANE RENT"
@@ -37,6 +41,7 @@
       :image-items="imageItemsPlanes"
     />
     <ContentSection
+      id="cars"
       path="car-booking"
       file="car-bg.jpg"
       title="CAR RENT"

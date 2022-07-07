@@ -5,10 +5,13 @@
         v-for="item in navLinks"
         :key="item.title"
         :class="{'nav__item' : true, 'nav__item--has-child' : item.children }">
-        <nuxt-link class="nav__link" :to="item.link">{{ item.title }}</nuxt-link>
+        <a class="nav__link" :href="item.link">{{ item.title }}</a>
         <ul v-if="item.children" class="nav__child-list">
           <li v-for="childItem in item.children" :key="childItem" class="nav__child-item">
-            <a class="nav__link nav__child-link" :href="childItem.link">{{ childItem.title }}</a>
+            <a
+              class="nav__link nav__child-link"
+              :href="childItem.link"
+            >{{ childItem.title }}</a>
           </li>
         </ul>
       </li>
@@ -24,7 +27,7 @@ export default {
     navLinks: [
       {
         title: 'ABOUT',
-        link: '/',
+        link: '#about',
       },
       {
         title: 'SERVICES',
@@ -32,23 +35,23 @@ export default {
         children: [
           {
             title: 'HOTELS',
-            link: '/'
+            link: '#hotels'
           },
           {
             title: 'CONCERTS',
-            link: '/'
+            link: '#concerts'
           },
           {
             title: 'YACHTS',
-            link: '/'
+            link: '#yachts'
           },
           {
             title: 'AIRPLANES',
-            link: '/'
+            link: '#planes'
           },
           {
             title: 'CARS',
-            link: '/'
+            link: '#cars'
           },
         ]
       },
