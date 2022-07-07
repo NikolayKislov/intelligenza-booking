@@ -6,6 +6,8 @@ export default {
   head: {
     title: 'intelligenza',
     htmlAttrs: {
+      class: 'html',
+      style: 'scroll-behavior: smooth',
       lang: 'en',
     },
     bodyAttrs: {

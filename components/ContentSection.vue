@@ -111,9 +111,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 20px;
+  gap: 10px;
   @include media.xl-only {
-    margin-top: 80px;
+    margin-top: 0px;
   }
 }
 
@@ -123,7 +123,7 @@ p {
     padding: 10px 20px;
     text-align: justify;
     letter-spacing: .2rem;
-    line-height: 2rem;
+    line-height: 1.6rem;
   }
 }
 
@@ -144,11 +144,11 @@ p {
   display: none;
   @include media.xl-only {
     opacity: 0;
-    top: 0;
+    top: -10%;
     right: 0;
     position: absolute;
     width: 70%;
-    height: 100vh;
+    height: 110vh;
     transition: all ease-in-out .3s;
     z-index: 20;
     display: grid;

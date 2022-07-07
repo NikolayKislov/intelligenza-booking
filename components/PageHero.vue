@@ -81,7 +81,7 @@ export default {
 }
 
 .hero-btn {
-  margin-top: 100px;
-  margin-bottom: 150px;
+  margin-top: 50px;
+  margin-bottom: 200px;
 }
 </style>

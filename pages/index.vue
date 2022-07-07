@@ -94,9 +94,4 @@ export default {
 @use '@/assets/styles/helpers/grid';
 @use '@/assets/styles/helpers/media';
 @use '@/assets/styles/helpers/helpers';
-
-body {
-  scroll-behavior: smooth;
-}
-
 </style>

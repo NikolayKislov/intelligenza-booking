@@ -42,7 +42,7 @@ input {
   padding: 5px 15px;
   background-color: var(--c-grey100);
   border: none;
-  box-shadow: 1px 1px 1px rgba(84, 179, 214, 1);
+  border-bottom: 1px solid rgba(84, 179, 214, 1);
   color: var(--c-grey00);
 
   &:focus {
@@ -67,7 +67,7 @@ textarea {
   resize: none;
   background-color: var(--c-grey100);
   border: none;
-  box-shadow: 1px 1px 1px rgba(84, 179, 214, 1);
+  border-bottom: 1px solid rgba(84, 179, 214, 1);
   color: var(--c-grey00);
 
   &:focus {
