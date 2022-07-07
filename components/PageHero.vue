@@ -3,7 +3,7 @@
     <div class="container hero__container">
       <h2 class="hero__title">{{ title }}</h2>
       <p class="hero__subtitle">{{ subtitle }}</p>
-      <AppBtn link="#contacts" text="Learn more"></AppBtn>
+      <AppBtn class="hero-btn" link="#contacts" text="Learn more"></AppBtn>
     </div>
   </div>
 </template>
@@ -78,5 +78,10 @@ export default {
     font-size: 14px;
     max-width: 300px;
   }
+}
+
+.hero-btn {
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
 </style>

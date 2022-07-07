@@ -38,14 +38,12 @@ export default {
   gap: 35px;
   background: var(--c-grey100);
   width: 300px;
-  height: 240px;
   text-align: center;
-  padding: 20px 20px;
+  padding: 30px 20px 40px;
 
   @include media.md-up {
     justify-content: flex-start;
     gap: 25px;
-    height: 270px;
   }
 }
 .item__image {

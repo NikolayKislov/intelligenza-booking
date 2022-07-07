@@ -48,6 +48,9 @@
       :description-items="descriptionItemsCars"
       :image-items="imageItemsCars"
     />
+    <FormContainer
+    id="contacts"
+    />
     <TheFooter />
   </div>
 </template>
@@ -87,8 +90,13 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @use '@/assets/styles/helpers/grid';
 @use '@/assets/styles/helpers/media';
 @use '@/assets/styles/helpers/helpers';
+
+body {
+  scroll-behavior: smooth;
+}
+
 </style>

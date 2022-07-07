@@ -5,6 +5,9 @@
       <h2 class="description__title">{{ title }}</h2>
       <div class="description__content">
         <p v-for="item in descriptionItems" :key="item">{{ item }}</p>
+        <AppBtn text="CONTACT US"
+        link="#contacts"
+        />
       </div>
     </div>
     <div class="description__items">
@@ -107,6 +110,7 @@ export default {
 .description__content {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 20px;
   @include media.xl-only {
     margin-top: 80px;

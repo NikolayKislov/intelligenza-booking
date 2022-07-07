@@ -28,8 +28,7 @@ export default {
 
 .btn {
   display: inline-block;
-  margin-top: 100px;
-  margin-bottom: 150px;
+  margin-top: 20px;
   padding: 20px 20px;
   cursor: pointer;
   color: #fff;
